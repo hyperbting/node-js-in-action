@@ -5,7 +5,7 @@ var channel = new events.EventEmitter();
   channel.clients = {};
   channel.subscriptions = {};
 
-channel.setMaxListener(s50);
+channel.setMaxListeners(50);
 
 channel.on('join', function(id, client) {
   this.clients[id] = client;
